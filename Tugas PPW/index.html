@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <style type="text/css">
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+    }
+    .img1{
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+    }
+    .img2{
+      border-radius: 100%;
+      height: 30px;
+    }
+    .contained_container{
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 200px;
+    }
+    .container_containing_contained_container{
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      height: 200px;
+    }
+    .container_containing_contained_container2{
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      order: 3;
+      align-items: center;
+    }
+    .container_containing_container_containing_contained_container{
+      display: flex;
+      flex-direction: column;
+      line-height: 0.6;
+    }
+    span{
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba(80,88,107,255);
+    }
+    .text1{
+      font-size: 18px;
+      font-weight: 600;
+      order: 1;
+      line-height: 1;
+    }
+    .text2{
+      font-size: 11px;
+      order: 2;
+      line-height: 1;
+    }
+    .text4{
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .text5{
+      font-size: 11px;
+    }
+    .a{
+      padding: 30px;
+      line-height: 0.7;
+    }
+    .b{
+      margin-left: auto;
+      position: relative;
+    }
+    .b button svg{
+      position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .b button {
+      height: 25px;
+      width: 25px;
+      background-color: rgba(237,242,248,255);
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-100%, -50%);
+      border: none;
+    }
+    .b button:active{
+      background-color: #6E8098;
+    }
+    .b button:active svg path{
+      fill: white;
+    }
+    @media only screen and (max-width: 600px) {
+      .contained_container {
+        flex-direction: column;
+        height: 450px;
+      }
+      .img1{
+        width: 350px;
+        object-fit:cover;
+      }
+      .a{
+        line-height: 1;
+      }
+      .text2{
+      font-size: 15px;
+      }
+    }
+  </style>
+</head>
+  <body style="background-color: rgba(237,242,248,255);">
+    <div class="container">
+      <div class="contained_container">
+        <img src="drawers.jpg" class="img1"> 
+        <div class="container_containing_contained_container">
+          <div class="a">
+            <span class="text1">
+              Shift the overall look and feel by adding these wonderful 
+              touches to furniture in your home
+            </span>
+            <br><br>
+            <span class="text2"> 
+              Ever been in a room and felt like something was missing? Perhaps 
+              it felt slightly bare and uninviting. I’ve got some simple tips 
+              to help you make any room feel complete.
+            </span>
+            <br><br>
+            <div class="container_containing_contained_container2" >
+              <img src="avatar-michelle.jpg" class="img2">
+              &nbsp;&nbsp;&nbsp;
+              <div class="container_containing_container_containing_contained_container">
+              <span class="text4"> 
+                Michelle Appleton
+              </span>
+              <br>
+              <span class="text5">  
+                28 Jun 2020
+              </span>
+            </div>
+            <div class="b">
+              <button><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
